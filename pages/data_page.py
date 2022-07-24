@@ -9,17 +9,16 @@ with st.spinner('Wait for it...'):
 # train, test 데이터 불러오기
 # 파일: data폴더 안에 train_review.csv, test_review.csv
 
-data_url = "data/"
 
 @st.cache
-def load_data(url, type):
-    df = pd.read_csv(f'{url}{type}_review.csv', encoding="utf-8", index_col="id")
+
+def load_data(type):
+    df = pd.read_csv(f'{type}_review.csv', encoding="utf-8", index_col="id")
     return df
 
-train_data = load_data(data_url, "train")
+train_data = load_data("train")
 train_data_grd = pd.DataFrame(train_data["target"].value_counts(normalize=True))
-
-test_data = load_data(data_url, "test")
+test_data = load_data("test")
 
 # data_page 표시
 

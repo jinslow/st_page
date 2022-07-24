@@ -10,5 +10,7 @@ image1 = Image.open(f'{path}RNN.png')
 image2 = Image.open(f'{path}pytorch.png')
     
 with st.container():
+    st.markdown('* RNN 사용')
     st.image(image1, width=400)
+    st.markdown('* Transformers-pytorch 사용')
     st.image(image2, width=400)

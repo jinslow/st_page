@@ -12,7 +12,7 @@ with st.spinner('Wait for it...'):
 @st.cache
 
 def load_data(type):
-    df = pd.read_csv(f'{type}_review.csv', encoding="utf-8", index_col="id")
+    df = pd.read_csv(f'pages/{type}_review.csv', encoding="utf-8", index_col="id")
     return df
 
 train_data = load_data("train")
